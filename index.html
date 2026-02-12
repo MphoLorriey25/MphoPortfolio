@@ -1,198 +1,189 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mpho Lorraine Ndou | Portfolio</title>
+<title>Mpho Lorraine Ndou | Executive Portfolio</title>
+
+<!-- Luxury Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-html{
-scroll-behavior:smooth;
-}
-
+html{scroll-behavior:smooth;}
 body{
 margin:0;
 padding:0;
-background:#ffffff;
-color:#000000;
-font-family:"Times New Roman", serif;
+background:white;
+color:black;
+font-family:'Inter', sans-serif;
+cursor:none;
 overflow-x:hidden;
 }
 
-/* ---------------- SPLASH SCREEN ---------------- */
-
-#splash{
+/* Scroll Progress Bar */
+#progress{
 position:fixed;
-width:100%;
-height:100vh;
+top:0;
+left:0;
+height:3px;
 background:black;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
+width:0%;
 z-index:9999;
-animation:fadeOut 3s forwards;
-animation-delay:3s;
 }
 
-#splash h1{
-letter-spacing:6px;
-font-weight:normal;
-animation:fadeIn 2s ease;
+/* Custom Luxury Cursor */
+.cursor{
+position:fixed;
+width:18px;
+height:18px;
+border:1px solid black;
+border-radius:50%;
+pointer-events:none;
+transform:translate(-50%,-50%);
+transition:0.08s ease;
+z-index:9999;
 }
 
-@keyframes fadeOut{
-to{opacity:0; visibility:hidden;}
+/* Floating Bubbles */
+.bubble{
+position:fixed;
+bottom:-100px;
+width:20px;
+height:20px;
+background:black;
+opacity:0.03;
+border-radius:50%;
+animation:float 25s infinite linear;
+}
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-120vh);}
 }
 
-@keyframes fadeIn{
-from{opacity:0; letter-spacing:15px;}
-to{opacity:1; letter-spacing:6px;}
-}
-
-/* ---------------- NAVIGATION ---------------- */
-
+/* Navigation */
 nav{
-width:90%;
-margin:auto;
-padding:25px 0;
 display:flex;
 justify-content:space-between;
+padding:25px 8%;
 border-bottom:1px solid black;
+font-size:14px;
+letter-spacing:2px;
 }
-
 nav a{
 text-decoration:none;
 color:black;
-margin-left:30px;
-font-size:14px;
-letter-spacing:2px;
+margin-left:25px;
 position:relative;
 }
-
-/* Luxury Hover Line */
 nav a::after{
 content:'';
 position:absolute;
 left:0;
-bottom:-5px;
+bottom:-6px;
 width:0;
 height:1px;
 background:black;
 transition:0.4s;
 }
+nav a:hover::after{width:100%;}
 
-nav a:hover::after{
-width:100%;
-}
-
-/* ---------------- SECTIONS ---------------- */
-
+/* Sections */
 section{
 width:75%;
-margin:120px auto;
-animation:fadeSection 1.2s ease;
+margin:140px auto;
+opacity:0;
+transform:translateY(40px);
+transition:1.2s ease;
+}
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
-@keyframes fadeSection{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
+/* Divider Line */
+.divider{
+width:0%;
+height:1px;
+background:black;
+margin:100px auto;
+transition:1.5s ease;
 }
+.divider.visible{width:75%;}
 
-h1{
-font-size:48px;
-letter-spacing:4px;
-font-weight:normal;
-}
-
-h2{
-font-size:22px;
-letter-spacing:3px;
-border-bottom:1px solid black;
-display:inline-block;
-padding-bottom:6px;
-margin-bottom:40px;
-}
-
-/* ---------------- HERO ---------------- */
-
+/* Hero */
 .hero{
 text-align:center;
 }
-
-.profile{
-width:180px;
-border-radius:50%;
-border:2px solid black;
-margin-bottom:30px;
-cursor:pointer;
-transition:0.4s;
+.hero h1{
+font-family:'Playfair Display', serif;
+font-size:56px;
+letter-spacing:3px;
+font-weight:600;
+}
+.hero p{
+letter-spacing:2px;
+margin-top:20px;
 }
 
-.profile:hover{
-transform:scale(1.08);
-}
-
-/* ---------------- PROJECTS ---------------- */
-
-.project{
-margin-bottom:60px;
-}
-
-.project a{
-text-decoration:none;
-color:black;
-font-size:20px;
-position:relative;
-}
-
-.project a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-5px;
-width:0;
-height:1px;
+/* Inversion Section */
+.invert{
 background:black;
-transition:0.4s;
+color:white;
+padding:150px 0;
+text-align:center;
+}
+.invert h2{
+font-family:'Playfair Display', serif;
+font-size:40px;
+letter-spacing:4px;
 }
 
-.project a:hover::after{
-width:100%;
+/* Stats */
+.stats{
+display:flex;
+justify-content:space-between;
+text-align:center;
+}
+.stat h3{
+font-size:40px;
+font-family:'Playfair Display', serif;
+}
+.stat p{
+letter-spacing:2px;
+font-size:13px;
 }
 
-/* ---------------- LAW FIRM CERTIFICATIONS STYLE ---------------- */
-
-.cert-box{
+/* Case Study */
+.case{
 border-left:3px solid black;
-padding-left:20px;
-margin-bottom:40px;
+padding-left:25px;
+margin-bottom:50px;
+}
+.case h3{
+font-family:'Playfair Display', serif;
 }
 
-/* ---------------- CV BUTTON ---------------- */
-
-.cv-button{
+/* Glass CV Button */
+.cv{
 display:inline-block;
-padding:12px 30px;
+padding:14px 40px;
 border:1px solid black;
+backdrop-filter:blur(6px);
 text-decoration:none;
 color:black;
 letter-spacing:2px;
 transition:0.4s;
 }
-
-.cv-button:hover{
+.cv:hover{
 background:black;
 color:white;
 }
 
-/* ---------------- FOOTER ---------------- */
-
+/* Footer */
 footer{
 text-align:center;
 padding:40px;
 border-top:1px solid black;
-font-size:14px;
 margin-top:100px;
+font-size:14px;
 }
 
 </style>
@@ -200,154 +191,136 @@ margin-top:100px;
 
 <body>
 
-<!-- SPLASH INTRO -->
-<div id="splash">
-<h1>MPHO LORRAINE NDOU</h1>
-<p>LAW | AI | CORPORATE INTELLIGENCE</p>
-</div>
+<div id="progress"></div>
+<div class="cursor"></div>
 
-<!-- NAVIGATION -->
+<!-- Floating Bubbles -->
+<div class="bubble" style="left:10%;animation-duration:30s;"></div>
+<div class="bubble" style="left:40%;animation-duration:35s;"></div>
+<div class="bubble" style="left:70%;animation-duration:28s;"></div>
+
 <nav>
 <div><strong>MPHO NDOU</strong></div>
 <div>
 <a href="#about">ABOUT</a>
-<a href="#expertise">EXPERTISE</a>
-<a href="#projects">WORK</a>
-<a href="#certifications">CREDENTIALS</a>
+<a href="#stats">IMPACT</a>
+<a href="#case">CASE STUDIES</a>
 <a href="#cv">CV</a>
-<a href="#contact">CONTACT</a>
 </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<img src="profile.png" class="profile" onclick="window.open(this.src)">
-<h1>Multidisciplinary Intelligence</h1>
-<p>
-LLB Scholar | AI Innovator | Stakeholder Engagement Professional | Corporate Administrator
-</p>
+<section class="hero visible">
+<h1>Intelligence With Authority</h1>
+<p>LAW • ARTIFICIAL INTELLIGENCE • CORPORATE STRATEGY</p>
 </section>
 
-<!-- ABOUT -->
+<div class="divider"></div>
+
 <section id="about">
-<h2>ABOUT</h2>
+<h2 style="font-family:'Playfair Display', serif;">ABOUT</h2>
 <p>
-Operating at the intersection of law, artificial intelligence, and corporate strategy, I combine analytical legal reasoning with technological innovation to design intelligent and responsible digital systems.
-</p>
-<p>
-My experience spans stakeholder engagement, executive administration, structured reporting, project coordination, AI system development, and data management.
-</p>
-<p>
-I approach every initiative with precision, intellectual discipline, and strategic foresight.
+I operate at the intersection of legal scholarship, artificial intelligence innovation, and corporate governance. My work integrates ethical reasoning with advanced technological systems to design responsible and strategic digital solutions.
 </p>
 </section>
 
-<!-- EXPERTISE -->
-<section id="expertise">
-<h2>EXPERTISE</h2>
+<div class="divider"></div>
 
-<p><strong>Artificial Intelligence & Development</strong><br>
-Full Stack Engineering, Large Language Models, API Systems, AI Ethics, Cloud AI Deployment.
-</p>
-
-<p><strong>Legal & Academic Excellence</strong><br>
-Legal research, regulatory analysis, structured argumentation, responsible innovation.
-</p>
-
-<p><strong>Corporate & Stakeholder Leadership</strong><br>
-Stakeholder engagement, professional communication, administration, governance reporting.
-</p>
-
+<section id="stats">
+<div class="stats">
+<div class="stat">
+<h3 data-target="10">0</h3>
+<p>AI PROJECTS</p>
+</div>
+<div class="stat">
+<h3 data-target="5">0</h3>
+<p>PROFESSIONAL CERTIFICATIONS</p>
+</div>
+<div class="stat">
+<h3 data-target="3">0</h3>
+<p>CORE DISCIPLINES</p>
+</div>
+</div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-<h2>SELECTED WORK</h2>
+<section class="invert">
+<h2>Ethical Innovation. Structured Power.</h2>
+<p>Where Law Meets Artificial Intelligence.</p>
+</section>
 
-<div class="project">
-<a href="https://legalaiapp-jrnucal5gcey3dswjkh6z8.streamlit.app/" target="_blank">
-LegalEase AI
-</a>
-<p>AI-powered legal simplification platform.</p>
+<section id="case">
+<h2 style="font-family:'Playfair Display', serif;">LEGAL-STYLE CASE STUDIES</h2>
+
+<div class="case">
+<h3>LegalEase AI</h3>
+<p><strong>Issue:</strong> Legal complexity limits public accessibility.<br>
+<strong>Strategy:</strong> Deploy AI-driven summarization using LLMs.<br>
+<strong>Outcome:</strong> Improved comprehension and ethical simplification framework.</p>
 </div>
 
-<div class="project">
-<a href="https://cohere-chatbot-t4mr.vercel.app/" target="_blank">
-Cohere AI Chatbot
-</a>
-<p>Conversational intelligence system.</p>
-</div>
-
-<div class="project">
-<a href="https://sentiment-dashboard-jmzufaa88feuna8v6ujtx4.streamlit.app/" target="_blank">
-Sentiment Intelligence Dashboard
-</a>
-<p>Real-time data analytics platform.</p>
-</div>
-
-<div class="project">
-<a href="https://learnmate-ai-1.onrender.com/" target="_blank">
-LearnMate.ai
-</a>
-<p>AI-powered academic performance assistant.</p>
+<div class="case">
+<h3>Sentiment Intelligence Dashboard</h3>
+<p><strong>Issue:</strong> Data lacked structured insight.<br>
+<strong>Strategy:</strong> Real-time analytics visualization engine.<br>
+<strong>Outcome:</strong> Actionable strategic decision-making data.</p>
 </div>
 
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-<h2>AWARDS & CERTIFICATIONS</h2>
-
-<div class="cert-box">
-<strong>CAPACITI AI Academy Graduate</strong><br>
-Artificial Intelligence & Machine Learning Intensive Programme
-</div>
-
-<div class="cert-box">
-<strong>Microsoft Azure AI</strong><br>
-Cloud-based Artificial Intelligence Systems
-</div>
-
-<div class="cert-box">
-<strong>IBM Generative AI & LLMs</strong><br>
-Advanced Language Model Systems & Applications
-</div>
-
-<div class="cert-box">
-<strong>Cisco Cybersecurity</strong><br>
-Foundations of Digital Security & Threat Intelligence
-</div>
-
-<div class="cert-box">
-<strong>Google Responsible AI</strong><br>
-Ethical AI Design & Governance Principles
-</div>
-
-</section>
-
-<!-- CV SECTION -->
 <section id="cv">
-<h2>CURRICULUM VITAE</h2>
-<p>
-Download a detailed overview of my academic background, professional experience, and technical expertise.
-</p>
-<a href="cv.pdf" class="cv-button" download>DOWNLOAD CV</a>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>CONTACT</h2>
-
-<p>Email: <a href="mailto:lorrieym@gmail.com">lorrieym@gmail.com</a></p>
-<p>Phone: 076 355 3963</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/mpho-lorraine-ndou-64bbba199/" target="_blank">View Profile</a></p>
-<p>GitHub: <a href="https://github.com/MphoLorriey25" target="_blank">View GitHub</a></p>
-
+<h2 style="font-family:'Playfair Display', serif;">CURRICULUM VITAE</h2>
+<p>Executive overview of academic, corporate, and technical experience.</p>
+<a href="cv.pdf" class="cv" download>DOWNLOAD CV</a>
 </section>
 
 <footer>
 © 2026 Mpho Lorraine Ndou | Executive Portfolio
 </footer>
+
+<script>
+/* Scroll Progress */
+window.onscroll=function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progress").style.width=scrolled+"%";
+}
+
+/* Custom Cursor */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",(e)=>{
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+});
+
+/* Section Reveal */
+const sections=document.querySelectorAll("section, .divider");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+sec.classList.add("visible");
+}
+});
+});
+
+/* Animated Counters */
+const counters=document.querySelectorAll("[data-target]");
+counters.forEach(counter=>{
+counter.innerText='0';
+const update=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const increment=target/100;
+if(c<target){
+counter.innerText=Math.ceil(c+increment);
+setTimeout(update,20);
+}else{
+counter.innerText=target;
+}
+}
+update();
+});
+</script>
 
 </body>
 </html>
