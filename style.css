@@ -27,6 +27,15 @@ nav .logo {
     color: #f9c74f;
     font-size: 1.8rem;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-tagline {
+    font-size: 0.8rem;
+    color: #ccc;
+    font-weight: 400;
+    margin-top: 2px;
 }
 
 nav ul {
@@ -72,7 +81,7 @@ html {
 }
 
 .hero-content p {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 1.2rem;
     color: #ccc;
 }
@@ -201,6 +210,40 @@ section {
 
 .card p {
     color: #ccc;
+}
+
+/* Skills Section */
+.skills {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 2rem;
+    color: #f9c74f;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill {
+    background-color: #121212;
+    border: 2px solid #f9c74f;
+    border-radius: 25px;
+    padding: 8px 15px;
+    color: #f9c74f;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(249, 199, 79, 0.4);
 }
 
 /* Projects */
