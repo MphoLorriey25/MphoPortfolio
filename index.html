@@ -9,212 +9,210 @@ body{
     padding:0;
     background:#ffffff;
     color:#000000;
-    font-family: 'Georgia', serif;
-    overflow-x:hidden;
+    font-family: "Times New Roman", serif;
 }
 
-/* Floating Bubbles */
-.bubble{
-    position:fixed;
-    bottom:-100px;
-    width:20px;
-    height:20px;
-    background:black;
-    border-radius:50%;
-    opacity:0.04;
-    animation:float 18s infinite ease-in;
-}
-@keyframes float{
-    0%{transform:translateY(0) scale(1);}
-    100%{transform:translateY(-1000px) scale(1.5);}
-}
-
-/* Container */
-.container{
-    width:85%;
+/* Navigation */
+nav{
+    width:90%;
     margin:auto;
-    padding:40px 0;
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid black;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    margin-left:25px;
+    font-size:14px;
+    letter-spacing:2px;
 }
 
 /* Sections */
 section{
-    margin-bottom:80px;
-    animation:fadeIn 1.5s ease;
+    width:75%;
+    margin:120px auto;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+/* Headings */
+h1{
+    font-size:48px;
+    font-weight:normal;
+    letter-spacing:4px;
 }
 
-h1,h2{
-    text-transform:uppercase;
+h2{
+    font-size:22px;
     letter-spacing:3px;
+    margin-bottom:40px;
+    border-bottom:1px solid black;
+    display:inline-block;
+    padding-bottom:5px;
 }
 
-/* Profile Image */
+/* Hero */
+.hero{
+    text-align:center;
+}
+
+.hero p{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+/* Profile */
 .profile{
-    width:200px;
+    width:180px;
     border-radius:50%;
     border:2px solid black;
+    margin-bottom:30px;
     cursor:pointer;
     transition:0.4s;
 }
+
 .profile:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 /* Projects */
 .project{
-    border:1px solid black;
-    padding:20px;
-    margin:15px 0;
-    transition:0.3s;
-}
-.project:hover{
-    background:black;
-    color:white;
+    margin-bottom:50px;
 }
 
-/* Links */
-a{
-    color:black;
+.project a{
+    font-size:20px;
     text-decoration:none;
-}
-a:hover{
-    text-decoration:underline;
+    color:black;
 }
 
-/* Contact Form */
-input, textarea{
-    width:100%;
-    padding:10px;
+.project p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* Contact */
+.contact p{
+    font-size:16px;
     margin:10px 0;
-    background:white;
-    color:black;
-    border:1px solid black;
 }
 
-button{
-    background:black;
-    color:white;
-    padding:10px 20px;
-    border:none;
-    cursor:pointer;
-}
-button:hover{
-    background:white;
-    color:black;
-    border:1px solid black;
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid black;
+    font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Floating Bubbles -->
-<div class="bubble" style="left:10%; animation-duration:16s;"></div>
-<div class="bubble" style="left:30%; animation-duration:20s;"></div>
-<div class="bubble" style="left:50%; animation-duration:18s;"></div>
-<div class="bubble" style="left:70%; animation-duration:22s;"></div>
-<div class="bubble" style="left:90%; animation-duration:19s;"></div>
+<nav>
+<div><strong>MPHO NDOU</strong></div>
+<div>
+<a href="#about">ABOUT</a>
+<a href="#expertise">EXPERTISE</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
+</div>
+</nav>
 
-<div class="container">
-
-<!-- HERO -->
-<section>
-<center>
+<section class="hero">
 <img src="profile.png" class="profile" onclick="window.open(this.src)">
-<h1>Mpho Lorraine Ndou</h1>
-<p>LLB Student | AI Developer | Stakeholder Engagement Intern | Administrator</p>
-</center>
-</section>
-
-<!-- ABOUT -->
-<section>
-<h2>About Me</h2>
+<h1>MPHO LORRAINE NDOU</h1>
 <p>
-I am a passionate LLB student, AI developer, and stakeholder engagement professional dedicated to blending law, technology, and business into impactful real-world solutions.
-</p>
-
-<p>
-My experience spans software development, AI systems, stakeholder engagement, administration, communication, data management, and project coordination. I operate confidently in both technical and corporate environments.
-</p>
-
-<p>
-As a CAPACITI AI Academy graduate, I continuously refine my expertise in Artificial Intelligence, Large Language Models, and responsible AI while maintaining strong foundations in leadership and structured problem-solving.
-</p>
-
-<p>
-I believe in building intelligent, ethical, and community-driven solutions.
+LLB Scholar | AI Innovator | Stakeholder Engagement Professional | Corporate Administrator
 </p>
 </section>
 
-<!-- SKILLS -->
-<section>
-<h2>Core Competencies</h2>
-<ul>
-<li>Full Stack Development (HTML, CSS, JavaScript, Python, Flask, Streamlit)</li>
-<li>Artificial Intelligence & Machine Learning</li>
-<li>Stakeholder Engagement & Communication</li>
-<li>Administration & Data Capturing</li>
-<li>Project Coordination</li>
-<li>Leadership & Professional Development</li>
-<li>Responsible AI & Ethics</li>
-</ul>
+<section id="about">
+<h2>ABOUT</h2>
+<p>
+I am a multidisciplinary professional operating at the intersection of law, artificial intelligence, corporate engagement, and academic excellence. As an LLB student and CAPACITI AI Academy graduate, I combine analytical legal reasoning with technological innovation to design intelligent, ethical, and impactful digital solutions.
+</p>
+
+<p>
+My professional experience spans stakeholder engagement, administration, communication strategy, data management, and project coordination. I bring executive-level structure, precision, and strategic thinking into both technical and corporate environments.
+</p>
+
+<p>
+I believe true innovation lies where discipline meets creativity — where law meets technology — and where intelligence is applied with responsibility.
+</p>
 </section>
 
-<!-- PROJECTS -->
-<section>
-<h2>Featured Projects</h2>
+<section id="expertise">
+<h2>EXPERTISE</h2>
 
-<div class="project">
-<h3><a href="https://legalaiapp-jrnucal5gcey3dswjkh6z8.streamlit.app/" target="_blank">LegalEase AI</a></h3>
-<p>An AI-powered legal assistant simplifying complex legal documents into clear summaries.</p>
-</div>
+<p><strong>Artificial Intelligence & Development</strong><br>
+Full Stack Development (HTML, CSS, JavaScript, Python, Flask, Streamlit), Large Language Models, API Integration, Responsible AI Systems.
+</p>
 
-<div class="project">
-<h3><a href="https://cohere-chatbot-t4mr.vercel.app/" target="_blank">Cohere Chatbot</a></h3>
-<p>A conversational AI chatbot delivering intelligent, context-aware responses.</p>
-</div>
+<p><strong>Legal & Academic Excellence</strong><br>
+Legal analysis, structured research, academic writing, regulatory awareness, ethical frameworks in technology.
+</p>
 
-<div class="project">
-<h3><a href="https://sentiment-dashboard-jmzufaa88feuna8v6ujtx4.streamlit.app/" target="_blank">Sentiment Dashboard</a></h3>
-<p>A real-time sentiment analysis dashboard visualizing public insights.</p>
-</div>
-
-<div class="project">
-<h3><a href="https://learnmate-ai-1.onrender.com/" target="_blank">LearnMate.ai</a></h3>
-<p>An AI-powered learning assistant for tracking academic progress and personalized study paths.</p>
-</div>
+<p><strong>Corporate & Stakeholder Engagement</strong><br>
+Stakeholder communication, administration, data capturing, reporting, project coordination, professional correspondence.
+</p>
 
 </section>
 
-<!-- CONTACT -->
-<section>
-<h2>Contact Me</h2>
+<section id="projects">
+<h2>SELECTED WORK</h2>
+
+<div class="project">
+<a href="https://legalaiapp-jrnucal5gcey3dswjkh6z8.streamlit.app/" target="_blank">
+LegalEase AI
+</a>
+<p>
+An AI-powered legal assistant designed to simplify complex legal documentation into accessible, structured summaries.
+</p>
+</div>
+
+<div class="project">
+<a href="https://cohere-chatbot-t4mr.vercel.app/" target="_blank">
+Cohere AI Chatbot
+</a>
+<p>
+A conversational intelligence system leveraging advanced language models for interactive engagement.
+</p>
+</div>
+
+<div class="project">
+<a href="https://sentiment-dashboard-jmzufaa88feuna8v6ujtx4.streamlit.app/" target="_blank">
+Sentiment Intelligence Dashboard
+</a>
+<p>
+A real-time sentiment analytics platform transforming raw data into strategic insight.
+</p>
+</div>
+
+<div class="project">
+<a href="https://learnmate-ai-1.onrender.com/" target="_blank">
+LearnMate.ai
+</a>
+<p>
+An AI-driven academic companion supporting personalized learning and performance tracking.
+</p>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>CONTACT</h2>
 
 <p>Email: <a href="mailto:lorrieym@gmail.com">lorrieym@gmail.com</a></p>
 <p>Phone: 076 355 3963</p>
-<p>
-LinkedIn: <a href="https://www.linkedin.com/in/mpho-lorraine-ndou-64bbba199/" target="_blank">View Profile</a><br>
-GitHub: <a href="https://github.com/MphoLorriey25" target="_blank">View GitHub</a>
-</p>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/mpho-lorraine-ndou-64bbba199/" target="_blank">View Profile</a></p>
+<p>GitHub: <a href="https://github.com/MphoLorriey25" target="_blank">View GitHub</a></p>
 
 </section>
 
-<center>
-<p>© 2026 Mpho Lorraine Ndou</p>
-</center>
-
-</div>
+<footer>
+© 2026 Mpho Lorraine Ndou | All Rights Reserved
+</footer>
 
 </body>
 </html>
