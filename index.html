@@ -7,8 +7,8 @@
 body{
     margin:0;
     padding:0;
-    background:#000000;
-    color:#ffffff;
+    background:#ffffff;
+    color:#000000;
     font-family: 'Georgia', serif;
     overflow-x:hidden;
 }
@@ -19,10 +19,10 @@ body{
     bottom:-100px;
     width:20px;
     height:20px;
-    background:white;
+    background:black;
     border-radius:50%;
-    opacity:0.05;
-    animation:float 15s infinite ease-in;
+    opacity:0.04;
+    animation:float 18s infinite ease-in;
 }
 @keyframes float{
     0%{transform:translateY(0) scale(1);}
@@ -39,7 +39,7 @@ body{
 /* Sections */
 section{
     margin-bottom:80px;
-    animation:fadeIn 2s ease;
+    animation:fadeIn 1.5s ease;
 }
 
 @keyframes fadeIn{
@@ -56,7 +56,7 @@ h1,h2{
 .profile{
     width:200px;
     border-radius:50%;
-    border:2px solid white;
+    border:2px solid black;
     cursor:pointer;
     transition:0.4s;
 }
@@ -66,62 +66,62 @@ h1,h2{
 
 /* Projects */
 .project{
-    border:1px solid white;
+    border:1px solid black;
     padding:20px;
     margin:15px 0;
     transition:0.3s;
 }
 .project:hover{
-    background:white;
-    color:black;
+    background:black;
+    color:white;
 }
 
-/* Buttons */
+/* Links */
 a{
-    color:white;
+    color:black;
     text-decoration:none;
 }
 a:hover{
     text-decoration:underline;
 }
 
-/* Contact */
+/* Contact Form */
 input, textarea{
     width:100%;
     padding:10px;
     margin:10px 0;
-    background:black;
-    color:white;
-    border:1px solid white;
+    background:white;
+    color:black;
+    border:1px solid black;
 }
 
 button{
-    background:white;
-    color:black;
+    background:black;
+    color:white;
     padding:10px 20px;
     border:none;
     cursor:pointer;
 }
 button:hover{
-    background:black;
-    color:white;
-    border:1px solid white;
+    background:white;
+    color:black;
+    border:1px solid black;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Floating bubbles -->
-<div class="bubble" style="left:10%; animation-duration:12s;"></div>
-<div class="bubble" style="left:30%; animation-duration:18s;"></div>
-<div class="bubble" style="left:50%; animation-duration:14s;"></div>
-<div class="bubble" style="left:70%; animation-duration:20s;"></div>
-<div class="bubble" style="left:90%; animation-duration:16s;"></div>
+<!-- Floating Bubbles -->
+<div class="bubble" style="left:10%; animation-duration:16s;"></div>
+<div class="bubble" style="left:30%; animation-duration:20s;"></div>
+<div class="bubble" style="left:50%; animation-duration:18s;"></div>
+<div class="bubble" style="left:70%; animation-duration:22s;"></div>
+<div class="bubble" style="left:90%; animation-duration:19s;"></div>
 
 <div class="container">
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section>
 <center>
 <img src="profile.png" class="profile" onclick="window.open(this.src)">
@@ -130,7 +130,7 @@ button:hover{
 </center>
 </section>
 
-<!-- BIO -->
+<!-- ABOUT -->
 <section>
 <h2>About Me</h2>
 <p>
@@ -138,15 +138,15 @@ I am a passionate LLB student, AI developer, and stakeholder engagement professi
 </p>
 
 <p>
-Beyond software development, I have practical experience in stakeholder engagement, administration, communication, data capturing, and project coordination. My work allows me to operate confidently in both technical and corporate environments.
+My experience spans software development, AI systems, stakeholder engagement, administration, communication, data management, and project coordination. I operate confidently in both technical and corporate environments.
 </p>
 
 <p>
-As a CAPACITI AI Academy graduate, I continue sharpening my expertise in Artificial Intelligence, Large Language Models, and responsible AI development while maintaining strong foundations in leadership, professionalism, and structured problem-solving.
+As a CAPACITI AI Academy graduate, I continuously refine my expertise in Artificial Intelligence, Large Language Models, and responsible AI while maintaining strong foundations in leadership and structured problem-solving.
 </p>
 
 <p>
-I believe in building solutions that are intelligent, ethical, and community-driven.
+I believe in building intelligent, ethical, and community-driven solutions.
 </p>
 </section>
 
@@ -157,9 +157,9 @@ I believe in building solutions that are intelligent, ethical, and community-dri
 <li>Full Stack Development (HTML, CSS, JavaScript, Python, Flask, Streamlit)</li>
 <li>Artificial Intelligence & Machine Learning</li>
 <li>Stakeholder Engagement & Communication</li>
-<li>Administration & Data Management</li>
+<li>Administration & Data Capturing</li>
 <li>Project Coordination</li>
-<li>Leadership & Problem Solving</li>
+<li>Leadership & Professional Development</li>
 <li>Responsible AI & Ethics</li>
 </ul>
 </section>
@@ -170,22 +170,22 @@ I believe in building solutions that are intelligent, ethical, and community-dri
 
 <div class="project">
 <h3><a href="https://legalaiapp-jrnucal5gcey3dswjkh6z8.streamlit.app/" target="_blank">LegalEase AI</a></h3>
-<p>An AI-powered legal assistant that simplifies complex legal documents into clear, accessible summaries.</p>
+<p>An AI-powered legal assistant simplifying complex legal documents into clear summaries.</p>
 </div>
 
 <div class="project">
 <h3><a href="https://cohere-chatbot-t4mr.vercel.app/" target="_blank">Cohere Chatbot</a></h3>
-<p>A conversational AI chatbot delivering intelligent and context-aware responses.</p>
+<p>A conversational AI chatbot delivering intelligent, context-aware responses.</p>
 </div>
 
 <div class="project">
 <h3><a href="https://sentiment-dashboard-jmzufaa88feuna8v6ujtx4.streamlit.app/" target="_blank">Sentiment Dashboard</a></h3>
-<p>A real-time sentiment analysis dashboard visualizing public opinion insights.</p>
+<p>A real-time sentiment analysis dashboard visualizing public insights.</p>
 </div>
 
 <div class="project">
 <h3><a href="https://learnmate-ai-1.onrender.com/" target="_blank">LearnMate.ai</a></h3>
-<p>An AI-driven learning assistant for tracking academic progress and personalized study paths.</p>
+<p>An AI-powered learning assistant for tracking academic progress and personalized study paths.</p>
 </div>
 
 </section>
