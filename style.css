@@ -101,3 +101,83 @@ nav ul li a:hover {
     border-radius: 50%;
     border: 3px solid #f9c74f;
 }
+/* About Me Section */
+.about {
+    padding: 100px 50px;
+    background-color: #1f1f1f; /* slightly lighter dark */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #f9c74f;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+.about-text .highlight {
+    color: #f9c74f;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: #121212;
+    border: 2px solid #f9c74f;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.card h3 {
+    color: #f9c74f;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(249, 199, 79, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate cards with delay */
+.cards .card:nth-child(1) { animation-delay: 0.2s; }
+.cards .card:nth-child(2) { animation-delay: 0.4s; }
+.cards .card:nth-child(3) { animation-delay: 0.6s; }
+.cards .card:nth-child(4) { animation-delay: 0.8s; }
+
