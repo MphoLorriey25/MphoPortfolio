@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mpho Ndou | Portfolio</title>
+<title>Mpho Lorraine Ndou | Portfolio</title>
 <style>
 /* ===== Reset & Base ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: #121212; color: #f5f5f5; scroll-behavior: smooth; overflow-x: hidden; }
+body { background: #0f0f1a; color: #f0f0f5; scroll-behavior: smooth; overflow-x: hidden; }
 
 /* ===== Navigation ===== */
 nav {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 15px 50px; background: #1f1f1f; position: fixed; width: 100%; z-index: 100;
+    padding: 15px 50px; background: #1b1b2f; position: fixed; width: 100%; z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 nav .logo { color: #f9c74f; font-weight: bold; font-size: 1.5rem; }
 nav ul { list-style: none; display: flex; gap: 20px; }
-nav ul li a { color: #f5f5f5; text-decoration: none; font-weight: 500; }
+nav ul li a { color: #f0f0f5; text-decoration: none; font-weight: 500; }
 nav ul li a:hover { color: #f9c74f; }
 
 /* ===== Sections ===== */
@@ -28,15 +28,16 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
 .hero { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; position: relative; overflow: hidden; }
 .hero-content { max-width: 600px; z-index: 2; }
 .hero-content h1 { font-size: 3rem; color: #f9c74f; margin: 10px 0; animation: fadeIn 2s ease; }
-.hero-content h2 { font-size: 1.5rem; color: #f5f5f5; animation: fadeIn 2.5s ease; }
+.hero-content h2 { font-size: 1.5rem; color: #f0f0f5; animation: fadeIn 2.5s ease; }
 .hero-content p { margin: 10px 0; color: #ccc; animation: fadeIn 3s ease; }
 .hero-content .highlight { color: #f9c74f; font-weight: bold; }
 
-.hero img { width: 300px; border-radius: 50%; border: 4px solid #f9c74f; z-index: 2; animation: floatImage 6s ease-in-out infinite; }
+.hero img { width: 300px; border-radius: 50%; border: 4px solid #f9c74f; z-index: 2; animation: floatImage 6s ease-in-out infinite; cursor: pointer; transition: transform 0.3s; }
+.hero img:hover { transform: scale(1.05); }
 
 /* ===== Hero Buttons ===== */
 .btn { display: inline-block; padding: 12px 25px; margin-top: 15px; margin-right: 10px;
-      background: #f9c74f; color: #121212; text-decoration: none; border-radius: 5px; font-weight: 600;
+      background: #f9c74f; color: #0f0f1a; text-decoration: none; border-radius: 5px; font-weight: 600;
       transition: 0.3s; }
 .btn:hover { background: #ffc93c; }
 
@@ -59,7 +60,7 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
 /* ===== About Cards ===== */
 .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
 .card {
-    background: #1f1f1f; border: 2px solid #f9c74f; border-radius: 15px;
+    background: #1b1b2f; border: 2px solid #f9c74f; border-radius: 15px;
     padding: 20px; width: 280px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(249,199,79,0.3); }
@@ -79,7 +80,7 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
 @keyframes floatSkill { 0% { transform: translateY(0); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0); } }
 
 /* ===== Projects Section ===== */
-.project-card { background: #1f1f1f; border: 2px solid #f9c74f; border-radius: 15px; padding: 20px; margin: 10px; width: 250px; text-align: center; display: inline-block; transition: 0.3s; }
+.project-card { background: #1b1b2f; border: 2px solid #f9c74f; border-radius: 15px; padding: 20px; margin: 10px; width: 250px; text-align: center; display: inline-block; transition: 0.3s; }
 .project-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(249,199,79,0.3); }
 
 /* ===== Animations ===== */
@@ -92,14 +93,13 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
     .hero img { margin-top: 20px; }
     .cards, .skills-list { flex-direction: column; align-items: center; }
 }
-
 </style>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav>
-    <div class="logo">Mpho Ndou</div>
+    <div class="logo">Mpho Lorraine Ndou</div>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -118,19 +118,29 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
 
     <div class="hero-content">
         <h2>Hello, I'm</h2>
-        <h1>Mpho Ndou</h1>
-        <p>LLB Student | AI Developer | Entrepreneur | Stakeholder Engagement Intern</p>
+        <h1>Mpho Lorraine Ndou</h1>
+        <p>LLB Student | Full Stack Developer | AI Developer | Entrepreneur | Stakeholder Engagement Intern</p>
         <p>Graduate of <span class="highlight">CAPACITI Academy</span></p>
         <a href="assets/MphoCV.pdf" download class="btn">Download CV</a>
         <a href="assets/RecommendationLetter.pdf" download class="btn">Recommendation Letter</a>
+        <p style="margin-top:15px;">Hi! I'm a passionate full-stack developer, blending law, AI, and business to create practical solutions. I also handle stakeholder engagement, administration, data capturing, and project coordination.</p>
     </div>
-    <img src="assets/profile.jpg" alt="Mpho Ndou">
+    <img src="assets/profile-transparent.png" alt="Mpho Ndou">
 </section>
 
 <!-- About Me Section -->
 <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Mpho Ndou, a passionate LLB student with a love for AI, coding, and entrepreneurship. I have experience in Stakeholder Engagement and building projects that combine law, technology, and business. I'm also a proud graduate of <span class="highlight">CAPACITI Academy</span>, where I gained hands-on skills in AI, web development, and problem-solving. I’m skilled in legal research, contracts, admin tasks, data capturing, project coordination, communication, and leadership. I'm constantly learning new tools, technologies, and ways to make an impact in the legal, tech, and business world.</p>
+    <p>
+        Passionate and Curious Full Stack Developer committed to continuous learning and innovation. 
+        I specialize in building responsive, user-friendly web applications using modern technologies like HTML, CSS, JavaScript, Python, Flask, and Streamlit. 
+        With a growing interest in AI, I’ve developed projects that simplify complex tasks using machine learning, natural language processing, and data visualization. 
+        <br><br>
+        I enjoy experimenting with new APIs, enhancing user experiences through clean design and smooth animations, and turning creative ideas into functional digital solutions. 
+        Beyond tech, I have experience in legal research, contracts, administration, data capturing, stakeholder engagement, entrepreneurship, and leadership. 
+        <br><br>
+        Whether it's building a chatbot, an educational platform, or an AI-powered legal assistant, I approach each project with enthusiasm, dedication, and a mindset of lifelong learning.
+    </p>
 
     <div class="cards">
         <div class="card">
@@ -139,29 +149,32 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
         </div>
         <div class="card">
             <h3>Tech & AI</h3>
-            <p>Self-taught developer. Built AI apps like LegalEase and Career Chatbot. Skilled in Python, JS, Flutter, and APIs.</p>
+            <p>Full Stack Developer. Built AI apps like LegalEase and Cohere Chatbot. Skilled in HTML, CSS, JS, Python, Flask, Streamlit, and APIs.</p>
         </div>
         <div class="card">
             <h3>Entrepreneurship</h3>
-            <p>Started Zwakala Kitchen and Magoro Empire. Love creating practical solutions for local communities.</p>
+            <p>Founded Zwakala Kitchen and Magoro Empire. Passionate about creating practical solutions for communities and businesses.</p>
         </div>
         <div class="card">
-            <h3>Internship</h3>
-            <p>Stakeholder Engagement Intern. Experienced in communication, teamwork, project coordination, and real-world execution.</p>
+            <h3>Internship & Admin</h3>
+            <p>Stakeholder Engagement Intern. Experienced in administration, data capturing, project coordination, communication, and leadership.</p>
         </div>
     </div>
 
     <div class="skills">
-        <h3>Skills</h3>
+        <h3>Skills & Expertise</h3>
         <div class="skills-list">
             <span class="skill">Legal Research</span>
             <span class="skill">Contract Analysis</span>
             <span class="skill">Python</span>
             <span class="skill">JavaScript</span>
-            <span class="skill">Flutter</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">Flask</span>
+            <span class="skill">Streamlit</span>
             <span class="skill">APIs</span>
-            <span class="skill">Admin</span>
+            <span class="skill">Administration</span>
             <span class="skill">Data Capturing</span>
+            <span class="skill">Project Coordination</span>
             <span class="skill">Stakeholder Engagement</span>
             <span class="skill">Entrepreneurship</span>
             <span class="skill">AI Development</span>
@@ -174,16 +187,35 @@ h2 { color: #f9c74f; margin-bottom: 20px; text-align: center; font-size: 2.5rem;
 <!-- Projects Section -->
 <section id="projects">
     <h2>Projects</h2>
-    <div class="project-card">LegalEase AI</div>
-    <div class="project-card">Career Chatbot</div>
-    <div class="project-card">UniPath</div>
-    <div class="project-card">Zwakala Kitchen</div>
+    <div class="project-card">
+        🧠 LegalEase AI<br>
+        AI tool that simplifies complex legal documents.<br>
+        <a href="https://legalaiapp-jrnucal5gcey3dswjkh6z8.streamlit.app/" target="_blank" class="btn">View</a>
+    </div>
+    <div class="project-card">
+        🤖 Cohere Chatbot<br>
+        AI chatbot for natural conversations.<br>
+        <a href="https://cohere-chatbot-t4mr.vercel.app/" target="_blank" class="btn">View</a>
+    </div>
+    <div class="project-card">
+        📊 Sentiment Dashboard<br>
+        Real-time sentiment analysis visualization.<br>
+        <a href="https://sentiment-dashboard-jmzufaa88feuna8v6ujtx4.streamlit.app/" target="_blank" class="btn">View</a>
+    </div>
+    <div class="project-card">
+        🎓 LearnMate.ai<br>
+        AI-powered learning platform.<br>
+        <a href="https://learnmate-ai-1.onrender.com/" target="_blank" class="btn">View</a>
+    </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
+    <p>Email: <a href="mailto:lorrieym@gmail.com">lorrieym@gmail.com</a></p>
+    <p>Phone: <a href="tel:0763553963">076 355 3963</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mpho-lorraine-ndou-64bbba199/" target="_blank">Mpho Lorraine Ndou</a></p>
+    <p>GitHub: <a href="https://github.com/MphoLorriey25" target="_blank">MphoLorriey25</a></p>
 </section>
 
 </body>
