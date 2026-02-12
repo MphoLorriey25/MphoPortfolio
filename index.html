@@ -1,244 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mpho Lorraine Ndou</title>
 
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-html{scroll-behavior:smooth;}
+/* ===== Base ===== */
+html {scroll-behavior: smooth;}
+body {margin:0;font-family:'Inter',sans-serif;background:white;color:black;transition:0.6s;overflow-x:hidden;position:relative;}
+.dark {background:black;color:white;}
 
-body{
-margin:0;
-font-family:'Inter', sans-serif;
-background:white;
-color:black;
-transition:0.6s;
-overflow-x:hidden;
+/* ===== Navigation ===== */
+nav {
+  display:flex;justify-content:space-between;padding:20px 8%;border-bottom:1px solid black;
+  z-index:100;position:fixed;width:100%;background:white;transition:0.6s;
 }
+.dark nav {border-bottom:1px solid white;background:black;}
+button {padding:6px 15px;border:1px solid black;background:none;cursor:pointer;transition:0.3s;}
+.dark button {border:1px solid white;color:white;}
 
-/* Dark Mode */
-.dark{
-background:black;
-color:white;
-}
+/* ===== Hero ===== */
+.hero {height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;}
+.hero h1 {font-family:'Playfair Display',serif;font-size:50px;letter-spacing:3px;z-index:2;position:relative;}
+.hero p {z-index:2;position:relative;margin-top:10px;}
+.hero .btn {margin-top:20px;z-index:2;position:relative;display:inline-block;padding:12px 25px;background:black;color:white;text-decoration:none;border-radius:5px;font-weight:600;transition:0.3s;}
+.hero .btn:hover {background:white;color:black;border:1px solid black;}
 
-/* Navigation */
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-border-bottom:1px solid black;
-}
+/* ===== Soft Bubbles ===== */
+.bubble {position:absolute;border-radius:50%;background:rgba(0,0,0,0.05);animation:floatBubble 25s linear infinite;}
+.bubble:nth-child(1){width:120px;height:120px;top:20%;left:10%;animation-delay:0s;}
+.bubble:nth-child(2){width:180px;height:180px;top:70%;left:80%;animation-delay:5s;}
+.bubble:nth-child(3){width:100px;height:100px;top:50%;left:50%;animation-delay:10s;}
+.bubble:nth-child(4){width:200px;height:200px;top:10%;left:70%;animation-delay:2s;}
+.bubble:nth-child(5){width:150px;height:150px;top:80%;left:30%;animation-delay:7s;}
+@keyframes floatBubble {0%{transform:translateY(0) rotate(0deg);opacity:0.5;}50%{transform:translateY(-600px) rotate(180deg);opacity:0.7;}100%{transform:translateY(-1200px) rotate(360deg);opacity:0;}}
 
-.dark nav{border-bottom:1px solid white;}
+/* ===== Sections ===== */
+section {width:75%;margin:120px auto;opacity:0;transform:translateY(40px);transition:1s;position:relative;}
+section.show {opacity:1;transform:translateY(0);}
+section hr {border:none;border-top:1px solid black;margin:50px 0;transition:0.6s;}
+.dark section hr {border-top:1px solid white;}
 
-button{
-padding:6px 15px;
-border:1px solid black;
-background:none;
-cursor:pointer;
-}
+/* ===== Parallax ===== */
+.parallax {height:300px;background:url('https://images.unsplash.com/photo-1520975918318-8f2c5b9a1f5e') center/cover fixed;margin:50px 0;}
 
-.dark button{border:1px solid white;color:white;}
+/* ===== About Me Cards ===== */
+.cards {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:30px;}
+.card {background:white;border:1px solid black;border-radius:10px;padding:20px;width:300px;text-align:center;transition:0.3s;position:relative;}
+.card:hover {transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+.card h3 {font-family:'Playfair Display',serif;color:black;margin-bottom:10px;}
 
-/* Hero */
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background-attachment:fixed;
-background-size:cover;
-}
+/* ===== Skills ===== */
+.skills {text-align:center;margin-top:50px;}
+.skills h3 {margin-bottom:25px;font-size:2rem;}
+.skills-list {display:flex;flex-wrap:wrap;justify-content:center;gap:15px;}
+.skill {border:1px solid black;border-radius:50%;padding:12px 20px;color:black;font-weight:600;background:rgba(0,0,0,0.03);transition:0.3s;}
+.skill:hover {transform:scale(1.1);box-shadow:0 5px 15px rgba(0,0,0,0.1);}
 
-.hero h1{
-font-family:'Playfair Display', serif;
-font-size:50px;
-letter-spacing:3px;
-}
+/* ===== Projects ===== */
+.project-card {background:white;border:1px solid black;border-radius:10px;padding:15px;margin:10px;width:280px;text-align:center;display:inline-block;transition:0.3s;}
+.project-card:hover {transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
 
-/* Sections */
-section{
-width:75%;
-margin:120px auto;
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
+/* ===== Footer ===== */
+footer {text-align:center;padding:40px;border-top:1px solid black;}
+.dark footer {border-top:1px solid white;}
 
-section.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* About Me Cards */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-margin-top:30px;
-}
-
-.card{
-background:white;
-border:1px solid black;
-border-radius:10px;
-padding:20px;
-width:300px;
-text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-.card h3{
-font-family:'Playfair Display', serif;
-color:black;
-margin-bottom:10px;
-}
-
-/* Skills */
-.skills{
-text-align:center;
-margin-top:50px;
-}
-
-.skills h3{
-margin-bottom:25px;
-font-size:2rem;
-}
-
-.skills-list{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.skill{
-border:1px solid black;
-border-radius:50%;
-padding:12px 20px;
-color:black;
-font-weight:600;
-background:rgba(0,0,0,0.03);
-transition:0.3s;
-}
-
-.skill:hover{
-transform:scale(1.1);
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Projects */
-.project-card{
-background:white;
-border:1px solid black;
-border-radius:10px;
-padding:15px;
-margin:10px;
-width:280px;
-text-align:center;
-display:inline-block;
-transition:0.3s;
-}
-
-.project-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* CV Download */
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin-top:10px;
-background:black;
-color:white;
-text-decoration:none;
-border-radius:5px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:white;
-color:black;
-border:1px solid black;
-}
-
-/* Footer */
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid black;
-}
-
-.dark footer{border-top:1px solid white;}
-
-/* Chatbot */
-.chatbox{
-position:fixed;
-bottom:20px;
-right:20px;
-width:250px;
-background:white;
-border:1px solid black;
-padding:15px;
-font-size:14px;
-}
-
-.dark .chatbox{
-background:black;
-border:1px solid white;
-color:white;
-}
-
-.chatbox input{
-width:100%;
-padding:5px;
-margin-top:8px;
-}
-
+/* ===== Chatbot ===== */
+.chatbox {position:fixed;bottom:20px;right:20px;width:250px;background:white;border:1px solid black;padding:15px;font-size:14px;}
+.dark .chatbox {background:black;border:1px solid white;color:white;}
+.chatbox input {width:100%;padding:5px;margin-top:8px;}
 </style>
 </head>
-
 <body>
 
+<!-- Navigation -->
 <nav>
-<div><strong>MPHO NDOU</strong></div>
-<button onclick="toggleMode()">Dark Mode</button>
+  <div><strong>MPHO NDOU</strong></div>
+  <button onclick="toggleMode()">Dark Mode</button>
 </nav>
 
+<!-- Hero Section -->
 <div class="hero">
-<h1 id="typing"></h1>
-<p>🔥 Luxury Fashion Brand • ⚖️ Legal Executive • 🤖 AI Innovator • 🏛 Corporate Professional • 🎓 Academic Scholar</p>
-<a href="assets/MphoCV.pdf" download class="btn">Download Curriculum Vitae</a>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <h1 id="typing"></h1>
+  <p>🔥 Luxury Fashion Brand • ⚖️ Legal Executive • 🤖 AI Innovator • 🏛 Corporate Professional • 🎓 Academic Scholar</p>
+  <a href="assets/MphoCV.pdf" download class="btn">Download Curriculum Vitae</a>
 </div>
 
+<!-- About Me -->
 <section>
 <h2>About Me</h2>
 <p>
-Hi! I'm Mpho Ndou — a passionate LLB student, AI developer, entrepreneur, and corporate professional. I combine legal knowledge, artificial intelligence, and corporate experience to create intelligent and ethical solutions. 
-I’ve built AI apps like LegalEase and Career Chatbot, started ventures like Zwakala Kitchen and Magoro Empire, and currently work as a Stakeholder Engagement Intern, gaining experience in communication, project coordination, administration, and leadership.
-I’m a proud CAPACITI Academy graduate, constantly learning new tech, exploring AI, coding, data management, and honing skills in law, admin, and entrepreneurship. I believe in creating solutions that matter — for communities, businesses, and individuals.
+Hi! I'm Mpho Lorraine Ndou — a passionate LLB student, AI developer, entrepreneur, corporate professional, and stakeholder engagement intern. I combine legal knowledge, AI, and corporate experience to create intelligent and ethical solutions.
+I’ve built AI apps like LegalEase AI and Cohere Chatbot, started ventures like Zwakala Kitchen and Magoro Empire, and currently gain hands-on experience in administration, project coordination, and leadership.
+I’m a CAPACITI Academy graduate and constantly learning new tech and law-tech skills to create impactful solutions.
 </p>
-
 <div class="cards">
-<div class="card"><h3>Law</h3><p>LLB Student at UNISA. Specializing in legal research, contracts, and law-tech innovation.</p></div>
-<div class="card"><h3>Technology & AI</h3><p>Self-taught developer. Built AI apps, dashboards, and chatbots. Skilled in Python, JavaScript, Flutter, APIs.</p></div>
-<div class="card"><h3>Entrepreneurship</h3><p>Founded Zwakala Kitchen & Magoro Empire. Focused on practical, community-driven solutions.</p></div>
-<div class="card"><h3>Corporate & Admin</h3><p>Stakeholder Engagement Intern. Skilled in admin tasks, data capturing, project coordination, and communication.</p></div>
+<div class="card"><h3>Law</h3><p>LLB Student at UNISA, specializing in contracts and law-tech innovation.</p></div>
+<div class="card"><h3>Technology & AI</h3><p>AI app developer, Python, JavaScript, Flutter, APIs.</p></div>
+<div class="card"><h3>Entrepreneurship</h3><p>Zwakala Kitchen & Magoro Empire founder.</p></div>
+<div class="card"><h3>Corporate & Admin</h3><p>Stakeholder Engagement, Administration, Data Capturing, Project Coordination.</p></div>
 </div>
+<hr>
 </section>
 
+<!-- Parallax Section -->
+<div class="parallax"></div>
+
+<!-- Projects -->
+<section>
+<h2>Projects</h2>
+<div class="project-card"><strong>LegalEase AI</strong><p>AI tool simplifying legal documents.</p></div>
+<div class="project-card"><strong>Cohere Chatbot</strong><p>Responsive AI chatbot for engagement.</p></div>
+<div class="project-card"><strong>Sentiment Dashboard</strong><p>Real-time sentiment analysis dashboard.</p></div>
+<div class="project-card"><strong>LearnMate.ai</strong><p>AI learning platform for study tracking.</p></div>
+<hr>
+</section>
+
+<!-- Skills -->
 <section>
 <h2>Skills</h2>
 <div class="skills-list">
@@ -248,7 +136,7 @@ I’m a proud CAPACITI Academy graduate, constantly learning new tech, exploring
 <span class="skill">JavaScript</span>
 <span class="skill">Flutter</span>
 <span class="skill">APIs</span>
-<span class="skill">Administration</span>
+<span class="skill">Admin</span>
 <span class="skill">Data Capturing</span>
 <span class="skill">Stakeholder Engagement</span>
 <span class="skill">Entrepreneurship</span>
@@ -256,28 +144,10 @@ I’m a proud CAPACITI Academy graduate, constantly learning new tech, exploring
 <span class="skill">Communication</span>
 <span class="skill">Leadership</span>
 </div>
+<hr>
 </section>
 
-<section>
-<h2>Projects</h2>
-<div class="project-card"><strong>LegalEase AI</strong><p>AI tool simplifying complex legal documents into clear summaries.</p></div>
-<div class="project-card"><strong>Cohere Chatbot</strong><p>Responsive AI chatbot for interactive support and engagement.</p></div>
-<div class="project-card"><strong>Sentiment Dashboard</strong><p>Real-time sentiment analysis dashboard with visual insights.</p></div>
-<div class="project-card"><strong>LearnMate.ai</strong><p>AI-powered learning platform to track study progress and analytics.</p></div>
-</section>
-
-<section>
-<h2>Awards & Certifications</h2>
-<div class="cards">
-<div class="card"><h3>Cisco Cybersecurity Badge</h3><p>Introduction to Cybersecurity – Cisco (International)</p></div>
-<div class="card"><h3>AI Bootcamp Badge</h3><p>Artificial Intelligence (AI) Bootcamp – CAPACITI Academy</p></div>
-<div class="card"><h3>Azure AI Badge</h3><p>AI on Microsoft Azure – Microsoft</p></div>
-<div class="card"><h3>Generative AI IBM Badge</h3><p>Generative AI for Everyone – IBM</p></div>
-<div class="card"><h3>LLMs Badge</h3><p>Generative AI with Large Language Models – IBM</p></div>
-<div class="card"><h3>Responsible AI Badge</h3><p>Introduction to Responsible AI – Google Cloud</p></div>
-</div>
-</section>
-
+<!-- Contact -->
 <section>
 <h2>Contact</h2>
 <p>Email: <a href="mailto:lorrieym@gmail.com">lorrieym@gmail.com</a></p>
@@ -286,11 +156,12 @@ I’m a proud CAPACITI Academy graduate, constantly learning new tech, exploring
 <p>GitHub: <a href="https://github.com/MphoLorriey25" target="_blank">MphoLorriey25</a></p>
 </section>
 
+<!-- Footer -->
 <footer>
 © 2026 Mpho Lorraine Ndou
 </footer>
 
-<!-- Simple Chatbot -->
+<!-- Chatbot -->
 <div class="chatbox">
 <strong>AI Assistant</strong>
 <p id="chatResponse">Ask me something...</p>
@@ -298,35 +169,21 @@ I’m a proud CAPACITI Academy graduate, constantly learning new tech, exploring
 </div>
 
 <script>
-
 /* Typing Animation */
 const text="MPHO LORRAINE NDOU";
 let i=0;
-function type(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(type,100);
-}
-}
+function type(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(type,100);}}
 type();
 
-/* Scroll Animation */
+/* Scroll Reveal */
 const sections=document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
-sec.classList.add("show");
-}
-});
-});
+sections.forEach(sec=>{if(sec.getBoundingClientRect().top<window.innerHeight-100){sec.classList.add("show");}})});
 
 /* Dark Mode */
-function toggleMode(){
-document.body.classList.toggle("dark");
-}
+function toggleMode(){document.body.classList.toggle("dark");}
 
-/* Simple Fake Chatbot */
+/* Simple Chatbot */
 function chat(e){
 if(e.key==="Enter"){
 let input=e.target.value.toLowerCase();
@@ -336,10 +193,7 @@ if(input.includes("ai")) response="She builds AI systems using modern tools and 
 if(input.includes("contact")) response="You can email her at lorrieym@gmail.com.";
 document.getElementById("chatResponse").innerText=response;
 e.target.value="";
-}
-}
-
+}}
 </script>
-
 </body>
 </html>
