@@ -1,4 +1,3 @@
-// Trigger animations on scroll
 const animateItems = document.querySelectorAll('.animate');
 
 window.addEventListener('scroll', () => {
@@ -12,4 +11,5 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
 
